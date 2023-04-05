@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Battery Life Calculator</title>
+	<script type="text/javascript">
+		function calculateBatteryLife() {
+			var batteryCapacity = document.getElementById("batteryCapacity").value;
+			var voltage = document.getElementById("voltage").value;
+			var averageDraw = document.getElementById("averageDraw").value;
+
+			// convert battery capacity from mAh to Ah
+			batteryCapacity /= 1000;
+
+			// calculate battery life
+			var batteryLife = batteryCapacity / (averageDraw * voltage);
+
+			document.getElementById("batteryLife").innerHTML = "Estimated Battery Life: " + batteryLife.toFixed(2) + " hours";
+		}
+	</script>
+</head>
+<body>
+	<h1>Battery Life Calculator</h1>
+
+	<p>Enter the following values:</p>
+
+	<label for="batteryCapacity">Battery Capacity (mAh):</label>
+	<input type="number" id="batteryCapacity" name="batteryCapacity" required>
+
+	<label for="voltage">Voltage (V):</label>
+	<input type="number" id="voltage" name="voltage" required>
+
+	<label for="averageDraw">Average Draw (A):</label>
+	<input type="number" id="averageDraw" name="averageDraw" required>
+
+	<br><br>
+
+	<button type="button" onclick="calculateBatteryLife()">Calculate Battery Life</button>
+
+	<br><br>
+
+	<p id="batteryLife"></p>
+
+</body>
+</html>
+
