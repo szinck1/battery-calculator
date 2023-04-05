@@ -1,2 +1,0 @@
-# battery-calculator
-Test
