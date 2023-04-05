@@ -7,16 +7,15 @@
   <body>
     <h1>Battery Life Calculator</h1>
     <form>
-      <label for="battery-capacity">Battery Capacity (mAh):</label>
-      <input type="number" id="battery-capacity" name="battery-capacity" required><br><br>
-      <label for="device-current">Device Current (mA):</label>
-      <input type="number" id="device-current" name="device-current" required><br><br>
-      <label for="device-hours">Device Usage Time (hours):</label>
-      <input type="number" id="device-hours" name="device-hours" required><br><br>
+      <label for="batteryCapacity">Battery Capacity (mAh):</label>
+      <input type="number" id="batteryCapacity" name="batteryCapacity" required><br><br>
+      <label for="voltage">Voltage (V):</label>
+      <input type="number" id="voltage" name="voltage" required><br><br>
+      <label for="averageDraw">Average Draw (mA):</label>
+      <input type="number" id="averageDraw" name="averageDraw" required><br><br>
       <button type="button" onclick="calculateBatteryLife()">Calculate</button>
     </form>
     <br>
-    <h2>Battery Life:</h2>
-    <p id="battery-life"></p>
+    <h2 id="batteryLife"></h2>
   </body>
 </html>
